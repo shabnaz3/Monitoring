@@ -1,0 +1,13 @@
+how to installl prometheus and grafan with terraform
+
+first provider identified :
+
+terraform installation
+
+hashicrop  installation
+
+helm installation
+
+Prometheus installation
+
+grafana installation
