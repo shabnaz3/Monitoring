@@ -1,0 +1,17 @@
+alertmanager:
+  alertmanagerSpec:
+    configSecret: alertmanager-gmail-secret
+grafana:
+  adminUser: admin
+  adminPassword: prom-operator
+
+  grafana.ini:
+    smtp:
+      enabled: true
+      host: mail.pi-lar.net:587
+      user: shabnaz.khanam@pi-lar.net
+      password: ${SMTP_PASSWORD}   
+      skip_verify: true
+      from_address: shabnaz.khanam@pi-lar.net
+      from_name: Grafana
+  envFromSecret: grafana-smtp-secret
