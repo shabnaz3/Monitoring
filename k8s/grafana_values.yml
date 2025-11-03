@@ -1,0 +1,16 @@
+grafana:
+  grafana.ini:
+    smtp:
+      enabled: true
+      existingSecret: grafana-smtp-secret
+      host: "$__env{SMTP_HOST}"
+      user: "$__env{SMTP_USER}"
+      password: "$__env{SMTP_PASSWORD}"
+      skip_verify: true
+      from_address: "$__env{SMTP_FROM_ADDRESS}"
+      from_name: "$__env{SMTP_FROM_NAME}"
+
+  envFromSecret: grafana-smtp-secret
+
+
+
