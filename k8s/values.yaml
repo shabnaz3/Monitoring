@@ -8,10 +8,10 @@ grafana:
   grafana.ini:
     smtp:
       enabled: true
-      host: mail.pi-lar.net:587
-      user: shabnaz.khanam@pi-lar.net
+      host: mail.gmail.com:587
+      user: your_gmail_address
       password: ${SMTP_PASSWORD}   
       skip_verify: true
-      from_address: shabnaz.khanam@pi-lar.net
+      from_address: your_gmail_address
       from_name: Grafana
   envFromSecret: grafana-smtp-secret
