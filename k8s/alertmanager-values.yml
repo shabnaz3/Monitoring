@@ -1,0 +1,16 @@
+alertmanager:
+  alertmanagerSpec:
+    config:
+      global:
+        smtp_smarthost: 'mail.pi-lar.net:587'
+        smtp_from: 'shabnaz.khanam@pi-lar.net'        
+        smtp_auth_username: 'your email address' 
+        smtp_auth_password: 'email_address_password'     
+        smtp_require_tls: true
+      route:
+        receiver: 'gmail-receiver'
+      receivers:
+        - name: 'gmail-receiver'
+          email_configs:
+            - to: 'shabnaz.khanam@pi-lar.net' 
+              send_resolved: true
